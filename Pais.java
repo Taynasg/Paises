@@ -1,14 +1,17 @@
 public class Pais {
-
-    private String codigoIso;
     private String nome;
+    private String codigoIso;
     private double populacao;
     private Long dimensao;
 
+    private String nomeDoContinente;
+    Pais() {
 
-    Pais (String codigoIso, String nome, double populacao, Long dimensao) {
-        this.codigoIso = codigoIso;
+    }
+
+    Pais(String nome, String codigoIso, double populacao, Long dimensao) {
         this.nome = nome;
+        this.codigoIso = codigoIso;
         this.populacao = populacao;
         this.dimensao = dimensao;
     }
@@ -37,11 +40,30 @@ public class Pais {
         this.populacao = populacao;
     }
 
-    public  float  getDimensao() {
+    public Long getDimensao() {
         return dimensao;
     }
 
     public void setDimensao(Long dimensao) {
         this.dimensao = dimensao;
     }
+
+
+    public String getNomeDoContinente() {
+        return nomeDoContinente;
+    }
+
+    public void setNomeDoContinente(String nomeDoContinente) {
+        this.nomeDoContinente = nomeDoContinente;
+    }
+
+    @Override
+    public String toString() {
+        return "\n Nome: " + getNome()
+                + "\n Código Iso: " + getCodigoIso()
+                + "\n População: " + getPopulacao()
+                + "\n Dimensao: " + getDimensao()
+                + "\n ";
+    }
 }
+
