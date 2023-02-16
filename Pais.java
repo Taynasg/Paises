@@ -4,7 +4,6 @@ public class Pais {
     private double populacao;
     private Long dimensao;
 
-    private String nomeDoContinente;
     Pais() {
 
     }
@@ -46,15 +45,6 @@ public class Pais {
 
     public void setDimensao(Long dimensao) {
         this.dimensao = dimensao;
-    }
-
-
-    public String getNomeDoContinente() {
-        return nomeDoContinente;
-    }
-
-    public void setNomeDoContinente(String nomeDoContinente) {
-        this.nomeDoContinente = nomeDoContinente;
     }
 
     @Override

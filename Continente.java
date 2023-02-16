@@ -27,5 +27,15 @@ public class Continente {
         listaDePaises.add(pais);
     }
 
+    public double retornarAreaTotalDoContiente() {
+        double soma = 0;
+        for (Pais pais : listaDePaises) {
+            soma = soma + pais.getDimensao();
+        }
+        return soma;
+    }
+
 
 }
+
+
