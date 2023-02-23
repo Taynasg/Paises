@@ -1,14 +1,16 @@
-public class Pais {
+import java.util.List;
+
+public class Pais  {
     private String nome;
     private String codigoIso;
-    private double populacao;
+    private int populacao;
     private Long dimensao;
 
     Pais() {
 
     }
 
-    Pais(String nome, String codigoIso, double populacao, Long dimensao) {
+    Pais(String nome, String codigoIso, int populacao, Long dimensao) {
         this.nome = nome;
         this.codigoIso = codigoIso;
         this.populacao = populacao;
@@ -31,11 +33,11 @@ public class Pais {
         this.nome = nome;
     }
 
-    public double getPopulacao() {
+    public int getPopulacao() {
         return populacao;
     }
 
-    public void setPopulacao(double populacao) {
+    public void setPopulacao(int populacao) {
         this.populacao = populacao;
     }
 
@@ -55,5 +57,30 @@ public class Pais {
                 + "\n Dimensao: " + getDimensao()
                 + "\n ";
     }
+//    public double mostrarPaisComMaiorPopulacaoTeste() {
+
+//        double maior = 0.0;
+//        for (Pais pais : listaDePaises) {
+//            if (pais.getPopulacao() > maior) {
+//                maior = pais.getPopulacao();
+//            }
+//            return maior;
+//        }
+//        return maior;
+
+//        Iterator<Pais> iterator = listaDePaises.iterator();
+//        iterator.forEachRemaining(pais -> {
+//            double populacao = pais.getPopulacao();
+//        });
+
+//        return (Iterator) listaDePaises;
+
+//Collection
+// listaDePaises.stream().filter(pais -> )).map(filtered -> filtered.limit);
+
+//        listaDePaises.stream().filter(populacao -> getPopulacao()).max((a,b)-> a. ;
+//
+//        return 1;
+//   }
 }
 

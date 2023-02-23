@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Continente {
 
@@ -14,13 +13,9 @@ public class Continente {
         this.nome = nome;
     }
 
-    public List<Pais> mostrarListrarListaDePaisesPorContinentes(Continente continente) {
+    public List<Pais> retornarListrarListaDePaisesPorContinentes(Continente continente) {
         System.out.println("Paises da " + continente.nome);
         return continente.listaDePaises;
-    }
-
-    public List<Pais> mostrarListrarListaDePaises() {
-        return listaDePaises;
     }
 
     public void adicionarPaises(Pais pais) {
@@ -28,14 +23,28 @@ public class Continente {
     }
 
     public double retornarAreaTotalDoContiente() {
-        double soma = 0;
+        double areaTotalDoContinente = 0;
         for (Pais pais : listaDePaises) {
-            soma = soma + pais.getDimensao();
+            areaTotalDoContinente = areaTotalDoContinente + pais.getDimensao();
         }
-        return soma;
+        return areaTotalDoContinente;
+    }
+
+    public double retornarPopulacaoTotalDoContiente() {
+        double populacaoTotalDoContinente = 0;
+        for (Pais pais : listaDePaises) {
+            populacaoTotalDoContinente = populacaoTotalDoContinente + pais.getPopulacao();
+        }
+        return populacaoTotalDoContinente;
+    }
+
+    public List<Pais> retornarPaisComMaiorPopulacao() {
+        listaDePaises.sort(Comparator.comparing(Pais::getPopulacao));
+        Collections.reverse(listaDePaises);
+        List<Pais> paisComMaiorPopulacao = Collections.singletonList(listaDePaises.get(0));
+
+        return paisComMaiorPopulacao;
     }
 
 
 }
-
-
