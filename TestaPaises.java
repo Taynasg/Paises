@@ -59,7 +59,7 @@ public class TestaPaises {
 
         System.out.println();
         System.out.println("Retornar país com menor população");
-        System.out.println(asia.retornarPaisComMaiorPopulacao());
+        System.out.println(asia.retornarPaisComMenorPopulacao());
 
 
     }
