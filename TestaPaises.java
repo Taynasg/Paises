@@ -58,12 +58,9 @@ public class TestaPaises {
         System.out.println(asia.retornarPaisComMaiorPopulacao());
 
         System.out.println();
-        System.out.println("Retornar país com maior dimensão territorial");
-        System.out.println(asia.retornarPaisComMaiorDimensaoTerritorial());
+        System.out.println("Retornar país com menor população");
+        System.out.println(asia.retornarPaisComMaiorPopulacao());
 
-        System.out.println();
-        System.out.println("Retornar país com menor dimensão territorial");
-        System.out.println(asia.retornarPaisComMenorDimensaoTerritorial());
 
     }
 }
