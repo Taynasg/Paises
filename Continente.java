@@ -52,5 +52,10 @@ public class Continente {
 
         return paisComMaiorDimensaoTerritorial;
     }
+    public List<Pais> retornarPaisComMenorDimensaoTerritorial() {
+        listaDePaises.sort(Comparator.comparing(Pais::getPopulacao));
+        List<Pais> paisComMenorDimensaoTerritorial = Collections.singletonList(listaDePaises.get(0));
+        return paisComMenorDimensaoTerritorial;
+    }
 
 }
