@@ -5,10 +5,6 @@ public class Continente {
     private String nome;
     private List<Pais> listaDePaises = new ArrayList<Pais>();
 
-    Continente() {
-
-    }
-
     Continente(String nome) {
         this.nome = nome;
     }
@@ -51,5 +47,19 @@ public class Continente {
         List<Pais> paisComMenorPopulacao = Collections.singletonList(listaDePaises.get(0));
 
         return paisComMenorPopulacao;
+    }
+
+    public List<Pais> retornarPaisComMaiorDimensaoTerritorial() {
+        listaDePaises.sort(Comparator.comparing(Pais::getPopulacao));
+        Collections.reverse(listaDePaises);
+        List<Pais> paisComMaiorDimensaoTerritorial = Collections.singletonList(listaDePaises.get(0));
+
+        return paisComMaiorDimensaoTerritorial;
+    }
+
+    public List<Pais> retornarPaisComMenorDimensaoTerritorial() {
+        listaDePaises.sort(Comparator.comparing(Pais::getPopulacao));
+        List<Pais> paisComMenorDimensaoTerritorial = Collections.singletonList(listaDePaises.get(0));
+        return paisComMenorDimensaoTerritorial;
     }
 }

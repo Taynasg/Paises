@@ -11,27 +11,27 @@ public class TestaPaises {
 
         Continente europa = new Continente("Europa");
 
-        europa.adicionarPaises(new Pais("Itália", "IT", 200, 2000l));
-        europa.adicionarPaises(new Pais("Reino Unido", "RU", 300, 3000l));
-        europa.adicionarPaises(new Pais("Espanha", "ES", 400, 4000l));
-        europa.adicionarPaises(new Pais("França", "FR", 600, 6000l));
+        europa.adicionarPaises(new Pais("Itália", "IT", 60641009, 302073l));
+        europa.adicionarPaises(new Pais("Reino Unido", "RU", 69056336, 243610l));
+        europa.adicionarPaises(new Pais("Espanha", "ES", 46442019, 505990l));
+        europa.adicionarPaises(new Pais("França", "FR", 66129878, 551695l));
         System.out.println(europa.retornarListrarListaDePaisesPorContinentes(europa));
 
         System.out.println();
 
         Continente americaDoSul = new Continente("América Do Sul");
-        americaDoSul.adicionarPaises(new Pais("Brasil", "BR", 500, 5000l));
-        americaDoSul.adicionarPaises(new Pais("Argentina", "AG", 700, 7000l));
-        americaDoSul.adicionarPaises(new Pais("Uruguai", "UG", 700, 7000l));
+        americaDoSul.adicionarPaises(new Pais("Brasil", "BR", 217934582, 8516000l));
+        americaDoSul.adicionarPaises(new Pais("Argentina", "AG", 46474208, 2780000l));
+        americaDoSul.adicionarPaises(new Pais("Uruguai", "UY", 3504563, 176215l));
         System.out.println(americaDoSul.retornarListrarListaDePaisesPorContinentes(americaDoSul));
 
         System.out.println();
 
         Continente asia = new Continente("Ásia");
-        asia.adicionarPaises(new Pais("Japão", "JP", 100, 1000l));
-        asia.adicionarPaises(new Pais("China", "CH", 200, 2000l));
-        asia.adicionarPaises(new Pais("Coreia do Norte", "CO", 700, 1000l));
-        asia.adicionarPaises(new Pais("Rússia", "RS", 300, 3000l));
+        asia.adicionarPaises(new Pais("Japão", "JP", 126197594, 377973l));
+        asia.adicionarPaises(new Pais("China", "CN", 1460026992, 9597000l));
+        asia.adicionarPaises(new Pais("Coreia do Norte", "KP", 26152652, 120540l));
+        asia.adicionarPaises(new Pais("Índia", "IN", 1428407744, 3287000l));
 
 
         System.out.println(asia.retornarListrarListaDePaisesPorContinentes(asia));
@@ -39,9 +39,9 @@ public class TestaPaises {
         System.out.println();
 
         Continente americaDoNorte = new Continente("América Do Norte");
-        americaDoNorte.adicionarPaises(new Pais("Estados Unidos", "US", 700, 7000l));
-        americaDoNorte.adicionarPaises(new Pais("Canadá", "CA", 500, 5000l));
-        americaDoNorte.adicionarPaises(new Pais("México", "ME", 600, 6000l));
+        americaDoNorte.adicionarPaises(new Pais("Estados Unidos", "US", 337924239, 9834000l));
+        americaDoNorte.adicionarPaises(new Pais("Canadá", "CA", 38815313, 5000l));
+        americaDoNorte.adicionarPaises(new Pais("México", "MX", 133862292, 6000l));
 
         System.out.println();
 
@@ -59,8 +59,15 @@ public class TestaPaises {
 
         System.out.println();
         System.out.println("Retornar país com menor população");
-        System.out.println(asia.retornarPaisComMaiorPopulacao());
+        System.out.println(asia.retornarPaisComMenorPopulacao());
 
+        System.out.println();
+        System.out.println("Retornar país com maior dimensão territorial");
+        System.out.println(asia.retornarPaisComMaiorDimensaoTerritorial());
+
+        System.out.println();
+        System.out.println("Retornar país com menor dimensão territorial");
+        System.out.println(asia.retornarPaisComMenorDimensaoTerritorial());
 
     }
 }
