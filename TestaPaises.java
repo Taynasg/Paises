@@ -8,7 +8,7 @@ public class TestaPaises {
         System.out.println("====================");
         System.out.println("      Paises");
         System.out.println("=====================");
-        
+
         Continente europa = new Continente("Europa");
 
         europa.adicionarPaises(new Pais("Itália", "IT", 200, 2000l));
@@ -56,6 +56,10 @@ public class TestaPaises {
         System.out.println();
         System.out.println("Retornar país com maior população");
         System.out.println(asia.retornarPaisComMaiorPopulacao());
+
+        System.out.println();
+        System.out.println("Retornar país com maior dimensão territorial");
+        System.out.println(asia.retornarPaisComMaiorDimensaoTerritorial());
 
     }
 }
