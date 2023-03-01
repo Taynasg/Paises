@@ -9,16 +9,16 @@ public class Continente {
         this.nome = nome;
     }
 
-    public List<Pais> retornarListrarListaDePaisesPorContinentes(Continente continente) {
+    public List<Pais> getPaises (Continente continente) {
         System.out.println("Paises da " + continente.nome);
         return continente.listaDePaises;
     }
 
-    public void adicionarPaises(Pais pais) {
+    public void adicionarPais(Pais pais) {
         listaDePaises.add(pais);
     }
 
-    public double retornarAreaTotalDoContiente() {
+    public double getAreaTotal() {
         double areaTotalDoContinente = 0;
         for (Pais pais : listaDePaises) {
             areaTotalDoContinente = areaTotalDoContinente + pais.getDimensao();
@@ -26,7 +26,7 @@ public class Continente {
         return areaTotalDoContinente;
     }
 
-    public double retornarPopulacaoTotalDoContiente() {
+    public double getPopulacaoTotal() {
         double populacaoTotalDoContinente = 0;
         for (Pais pais : listaDePaises) {
             populacaoTotalDoContinente = populacaoTotalDoContinente + pais.getPopulacao();
@@ -34,32 +34,29 @@ public class Continente {
         return populacaoTotalDoContinente;
     }
 
-    public List<Pais> retornarPaisComMaiorPopulacao() {
+    public Pais getPaisMaiorPopulacao() {
         listaDePaises.sort(Comparator.comparing(Pais::getPopulacao));
         Collections.reverse(listaDePaises);
         List<Pais> paisComMaiorPopulacao = Collections.singletonList(listaDePaises.get(0));
 
-        return paisComMaiorPopulacao;
+        return listaDePaises.get(0);
     }
 
-    public List<Pais> retornarPaisComMenorPopulacao() {
+    public List<Pais> getPaisMenorPopulacao() {
         listaDePaises.sort(Comparator.comparing(Pais::getPopulacao));
         List<Pais> paisComMenorPopulacao = Collections.singletonList(listaDePaises.get(0));
 
         return paisComMenorPopulacao;
     }
 
-    public List<Pais> retornarPaisComMaiorDimensaoTerritorial() {
+    public Pais getPaisMaiorDimensaoTerritorial() {
         listaDePaises.sort(Comparator.comparing(Pais::getPopulacao));
         Collections.reverse(listaDePaises);
-        List<Pais> paisComMaiorDimensaoTerritorial = Collections.singletonList(listaDePaises.get(0));
-
-        return paisComMaiorDimensaoTerritorial;
+        return listaDePaises.get(0);
     }
 
-    public List<Pais> retornarPaisComMenorDimensaoTerritorial() {
+    public Pais getPaisMenorDimensaoTerritorial() {
         listaDePaises.sort(Comparator.comparing(Pais::getPopulacao));
-        List<Pais> paisComMenorDimensaoTerritorial = Collections.singletonList(listaDePaises.get(0));
-        return paisComMenorDimensaoTerritorial;
+        return listaDePaises.get(0);
     }
 }

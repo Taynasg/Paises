@@ -21,32 +21,16 @@ public class Pais  {
         return codigoIso;
     }
 
-    public void setCodigoIso(String codigoIso) {
-        this.codigoIso = codigoIso;
-    }
-
     public String getNome() {
         return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public int getPopulacao() {
         return populacao;
     }
 
-    public void setPopulacao(int populacao) {
-        this.populacao = populacao;
-    }
-
     public Long getDimensao() {
         return dimensao;
-    }
-
-    public void setDimensao(Long dimensao) {
-        this.dimensao = dimensao;
     }
 
     @Override
@@ -57,30 +41,5 @@ public class Pais  {
                 + "\n Dimensao: " + getDimensao()
                 + "\n ";
     }
-//    public double mostrarPaisComMaiorPopulacaoTeste() {
-
-//        double maior = 0.0;
-//        for (Pais pais : listaDePaises) {
-//            if (pais.getPopulacao() > maior) {
-//                maior = pais.getPopulacao();
-//            }
-//            return maior;
-//        }
-//        return maior;
-
-//        Iterator<Pais> iterator = listaDePaises.iterator();
-//        iterator.forEachRemaining(pais -> {
-//            double populacao = pais.getPopulacao();
-//        });
-
-//        return (Iterator) listaDePaises;
-
-//Collection
-// listaDePaises.stream().filter(pais -> )).map(filtered -> filtered.limit);
-
-//        listaDePaises.stream().filter(populacao -> getPopulacao()).max((a,b)-> a. ;
-//
-//        return 1;
-//   }
 }
 
