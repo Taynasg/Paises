@@ -18,7 +18,8 @@ public class Continente {
         listaDePaises.add(pais);
     }
 
-    public double getAreaTotal() {
+    public double getAreaTotal(Continente continente) {
+        System.out.println("Área total do continente " + continente.nome);
         double areaTotalDoContinente = 0;
         for (Pais pais : listaDePaises) {
             areaTotalDoContinente = areaTotalDoContinente + pais.getDimensao();
@@ -26,7 +27,8 @@ public class Continente {
         return areaTotalDoContinente;
     }
 
-    public double getPopulacaoTotal() {
+    public double getPopulacaoTotal(Continente continente) {
+        System.out.println("População total do continente " + continente.nome);
         double populacaoTotalDoContinente = 0;
         for (Pais pais : listaDePaises) {
             populacaoTotalDoContinente = populacaoTotalDoContinente + pais.getPopulacao();
@@ -34,28 +36,28 @@ public class Continente {
         return populacaoTotalDoContinente;
     }
 
-    public Pais getPaisMaiorPopulacao() {
-        listaDePaises.sort(Comparator.comparing(Pais::getPopulacao));
-        Collections.reverse(listaDePaises);
-        List<Pais> paisComMaiorPopulacao = Collections.singletonList(listaDePaises.get(0));
-
-        return listaDePaises.get(0);
-    }
-
-    public List<Pais> getPaisMenorPopulacao() {
-        listaDePaises.sort(Comparator.comparing(Pais::getPopulacao));
-        List<Pais> paisComMenorPopulacao = Collections.singletonList(listaDePaises.get(0));
-
-        return paisComMenorPopulacao;
-    }
-
-    public Pais getPaisMaiorDimensaoTerritorial() {
+    public Pais getPaisMaiorPopulacao(Continente continente) {
+        System.out.println("País com maior população da " + continente.nome);
         listaDePaises.sort(Comparator.comparing(Pais::getPopulacao));
         Collections.reverse(listaDePaises);
         return listaDePaises.get(0);
     }
 
-    public Pais getPaisMenorDimensaoTerritorial() {
+    public Pais getPaisMenorPopulacao(Continente continente) {
+        System.out.println("País com maior população da " + continente.nome);
+        listaDePaises.sort(Comparator.comparing(Pais::getPopulacao));
+        return listaDePaises.get(0);
+    }
+
+    public Pais getPaisMaiorDimensaoTerritorial(Continente continente) {
+        System.out.println("País com maior dimensão Territoria da " + continente.nome);
+        listaDePaises.sort(Comparator.comparing(Pais::getPopulacao));
+        Collections.reverse(listaDePaises);
+        return listaDePaises.get(0);
+    }
+
+    public Pais getPaisMenorDimensaoTerritorial(Continente continente) {
+        System.out.println("País com maior menor dimensao da " + continente.nome);
         listaDePaises.sort(Comparator.comparing(Pais::getPopulacao));
         return listaDePaises.get(0);
     }
