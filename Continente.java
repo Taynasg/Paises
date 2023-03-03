@@ -57,7 +57,7 @@ public class Continente {
     }
 
     public Pais getPaisMenorDimensaoTerritorial(Continente continente) {
-        System.out.println("País com menor menor dimensão da " + continente.nome);
+        System.out.println("País com menor dimensão da " + continente.nome);
         listaDePaises.sort(Comparator.comparing(Pais::getPopulacao));
         return listaDePaises.get(0);
     }
